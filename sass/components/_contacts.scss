@@ -1,0 +1,155 @@
+/*
+ * CONTACTS
+ * ========================================
+ */
+.get-in-touch {
+
+  .cricle__item {
+    transition: all .5s ease;
+  }
+
+  .cricle__item--top {
+    top: 550px;
+  }
+
+  .cricle__item--right {
+    right: -100%;
+
+    &.fadeIn {
+      right: 0;
+    }
+  }
+
+  .bx-content__header {
+    margin-bottom: 30px;
+
+    @include media(">=lg") {
+      margin-bottom: 92px;
+    }
+  }
+
+  .bx-contacts__form {
+    padding: 0;
+    width: 100%;
+
+    @include media(">=lg") {
+      width: 49%;
+    }
+  }
+}
+
+.contacts-info {
+  padding: 0 0 120px;
+
+  .cricle__item {
+    transition: all .5s ease;
+  }
+
+  .cricle__item--bottom {
+    bottom: 135px;
+  }
+
+  .cricle__item--left {
+    left: -100%;
+
+    &.fadeIn {
+      left: 0;
+    }
+  }
+}
+
+.info-commpany__item {
+  width: 100%;
+  float: left;
+  padding-right: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7;
+
+    @include media(">=md") {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  @include media(">=md") {
+    padding-right: 80px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+}
+
+.info-company__office {
+  margin-left: 0;
+  margin-bottom: 27px;
+  padding-left: 45px;
+  letter-spacing: 4px;
+  font-size: 12px;
+  line-height: 1.75;
+
+  @include media(">=lg") {
+    font-size: 20px;
+  }
+
+  @include media(">=lg") {
+    padding-left: 87px;
+  }
+
+  &.bx-content__title--line-left:after {
+    width: 68px;
+  }
+
+  &.fadeIn.bx-content__title--line-left:after {
+    left: 0;
+  }
+}
+
+[class*="bx-content__title--line"]:after {
+  display: none;
+
+  @include media(">=lg") {
+    display: block;
+  }
+}
+
+.info-company__address,
+.info-company__phone,
+.info-company__email {
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  line-height: 2.222;
+}
+
+.info-company__address--short {
+  font-size: 22px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 0;
+
+  @include media(">=lg") {
+    font-size: 40px;
+    margin-bottom: 17px;
+  }
+}
+
+@include media("<sm") {
+  .info-company__address--short,
+  .info-company__office {
+    padding: 0;
+  }
+}
+
+.info-company__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}

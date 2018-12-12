@@ -1,0 +1,133 @@
+/* Widgets as list  */
+.widget_rss,
+.widget_nav_menu,
+.widget_archive,
+.widget_categories,
+.widget_links,
+.widget_meta,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries {
+  ul, ol {
+    @extend .list-unstyled;
+    margin-bottom: 0;
+    li {
+      position: relative;
+      > a {
+        display: inline-block;
+        padding-right: 5px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: $default-border;
+      }
+      > a:hover {
+        text-decoration: underline;
+      }
+    }
+    ul, ol {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: $default-border;
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+    li.current-cat > a {
+      color: $primary-color;
+    }
+  }
+}
+/* Widget nav-menu fixed */
+.widget_nav_menu .menu {
+  ul {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    padding-left: 15px;
+    display: none;
+  }
+}
+
+/* Widget calendar */
+.widget_calendar table {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  td,
+  th {
+    padding: 0;
+    line-height: 3;
+    text-align: center;
+  }
+  caption {
+    color: $third-color;
+    padding-top: 0;
+    padding-bottom: 12px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: $default-border;
+  }
+  thead tr th {
+    color: $third-color;
+    font-weight: 400;
+  }
+  tbody tr td {
+    font-size: 12px;
+  }
+  tbody a {
+    color: black;
+    font-weight: 700;
+    display: block;
+    background-color: #f0f0f0;
+    &:hover,
+    &:focus {
+      background-color: darken(#f0f0f0, 10%);
+    }
+  }
+  tfoot {
+    height: 0;
+    display: inline-block;
+    overflow: hidden;
+  }
+  tfoot a {
+    top: 7px;
+    position: absolute;
+    line-height: 1;
+  }
+  #prev a {
+    left: 0;
+  }
+  #next a {
+    right: 0;
+  }
+
+  #today,
+  #today a {
+    color: white;
+    background-color: $primary-color;
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: darken($primary-color, 20%);
+    }
+  }
+}
+
+/* Widget tagcloud */
+.widget_tagcloud a {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 0 5px 10px 0;
+  border: 1px solid #e0e0e0;
+  color: #717171;
+  font-size: 14px !important;
+  transition: all .4s ease;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+    border-color: $primary-color;
+  }
+}

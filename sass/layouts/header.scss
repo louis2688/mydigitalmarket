@@ -1,0 +1,228 @@
+//
+// HEADER LAYOUT
+// ====================================================
+#header {
+  .navbar {
+    min-height: 0;
+    backface-visibility: hidden;
+    transition: all .3s ease;
+
+    @include media(">=md") {
+      background: #f8f8f8;
+    }
+
+    &.affix-top {
+      .awemenu-logo-scroll {
+        @include vhidden();
+      }
+    }
+
+    &.affix,
+    &.affix-header {
+      background: black !important;
+      color: white;
+      min-height: 75px !important;
+
+      .awemenu-logo-scroll {
+        @include vdisplay();
+      }
+
+      .awemenu-logo-fixed {
+        @include vhidden();
+      }
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      .navbar-toggle {
+        top: 10px;
+      }
+
+      .navbar-brand--text {
+        top: 27px;
+      }
+
+      .navbar-brand--image {
+        top: 15px;
+      }
+
+      .site_logo_fixed {
+        @include vhidden();
+      }
+
+      .site_logo_scroll {
+        @include vdisplay();
+      }
+
+      &.affix--bg-black {
+        background: black;
+        color: white;
+
+        a {
+          color: white;
+        }
+
+        .site_logo_fixed {
+          @include vhidden();
+        }
+
+        .site_logo_scroll {
+          @include vdisplay();
+        }
+      }
+
+      &.affix--bg-white {
+        background: white !important;
+        color: black;
+
+        a {
+          color: black;
+        }
+
+        .site_logo_fixed {
+          @include vhidden();
+        }
+
+        .site_logo_scroll {
+          @include vdisplay();
+        }
+      }
+    }
+
+    &.affix-header {
+      z-index: 999;
+    }
+
+    &.navbar-single {
+      color: white;
+
+      a {
+        color: white;
+      }
+    }
+
+    &[data-spy="affix"] {
+      z-index: 999;
+      background: none;
+      min-height: 125px;
+
+      @include position(fixed,0,0,null,0);
+    }
+
+    &:not([data-spy="affix"]) {
+      .awemenu-logo-scroll {
+        @include vhidden();
+      }
+    }
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    z-index: 10;
+    top: 18px;
+    font-size: 20px;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+    transition: all .4s ease;
+
+    @include vhidden();
+
+    @include media(">=lg") {
+      top: 80px;
+    }
+
+    > * {
+      transition: all 1.2s ease;
+    }
+  }
+
+  .navbar-brand--text {
+    top: 30px;
+
+    @include media(">=lg") {
+      top: 80px;
+    }
+
+    .logo-label {
+      position: absolute;
+      left: -50px;
+      font-size: 60px;
+      cursor: pointer;
+    }
+
+    .logo-span {
+      position: absolute;
+      left: 190px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .navbar-brand--image {
+    left: -100%;
+
+    .site_logo_scroll {
+      @include vhidden();
+    }
+  }
+}
+
+.fadeIn {
+  .navbar-toggle {
+    right: 25px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    @include media(">=lg") {
+      right: 84px !important;
+    }
+  }
+  .navbar-brand {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .navbar-brand--text {
+    .logo-label {
+      left: 20px !important;
+
+      @include media(">=lg") {
+        left: 88px !important;
+      }
+    }
+
+    .logo-span {
+      height: 25px;
+      left: 70px !important;
+      overflow: hidden;
+
+      @include media(">=lg") {
+        width: 650px;
+        left: 140px !important;
+      }
+    }
+  }
+
+  .navbar-brand--image {
+    left: 20px !important;
+
+    @include media(">=lg") {
+      left: 90px !important;
+    }
+
+    img {
+      max-width: 200px;
+      height: 45px;
+    }
+  }
+}

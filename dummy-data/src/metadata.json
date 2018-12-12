@@ -1,0 +1,10 @@
+{
+  "setmenu": {
+    "primary": "primary-menu"
+  },
+  "options": {
+    "show_on_front": "page",
+    "page_on_front": "Home",
+    "page_for_posts": "Blog"
+  }
+}

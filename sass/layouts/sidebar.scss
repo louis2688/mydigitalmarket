@@ -1,0 +1,276 @@
+//
+// SIDEBAR
+// ====================================================
+.sidebar {
+  display: none;
+
+  @include media(">=md") {
+    display: block;
+  }
+
+  .widget + .widget {
+    margin-top: 55px;
+  }
+
+  .widget-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      width: 20px;
+      background: $primary-color;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+
+  ul, ol {
+    padding: 0;
+    li {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  input[type="search"],
+  input[type="text"],
+  input[type="email"] {
+    border: 1px solid #e0e0e0;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 25px 50px 25px 25px !important;
+    width: 100%;
+    border-radius: 0;
+
+    @include placeholder(#717171);
+  }
+}
+
+.search-form {
+  position: relative;
+  z-index: 5;
+
+  label {
+    display: block;
+  }
+}
+
+.search-submit {
+  display: block;
+  border: none;
+  z-index: 10;
+  background: none !important;
+  color: #666;
+  padding: 6px 17px 6px 0;
+
+  @include absolute(0,0,0);
+
+  &:after {
+    font-size: 16px;
+
+    @include fa("\f002");
+  }
+
+  &:hover {
+    color: black;
+  }
+}
+
+.subscibe-form {
+  label {
+    display: block;
+  }
+
+  input[type="email"] {
+    background: #efefef;
+    border-color: #efefef;
+    margin-bottom: 10px;
+    padding-right: 25px !important;
+
+    &:focus {
+      background: white;
+      border-color: #e0e0e0;
+    }
+  }
+}
+
+.subscibe-submit {
+  background: black;
+  color: white;
+  padding: 6px 15px;
+}
+
+.widget_instagram {
+  .inst-item {
+    display: inline-block;
+    margin: 0 5px 8px 0;
+
+    a {
+      position: relative;
+      display: block;
+      font-size: 0;
+
+      &:after {
+        content: "";
+        transition: all .4s ease;
+
+        @include overlay($primary-color,.7,5);
+        @include vhidden();
+      }
+
+      &:hover:after {
+        @include vdisplay();
+      }
+    }
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    @include media(">=md") {
+      width: 64px;
+      height: 64px;
+    }
+
+    @include media(">=lg") {
+      width: 81px;
+      height: 81px;
+    }
+  }
+
+  .inst-follow {
+    font-size: 12px;
+
+    a:hover {
+      color: $secondary-color !important;
+    }
+  }
+}
+
+.widget_categories {
+  li {
+    border-color: #efefef !important;
+  }
+
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+.widget_recent_entries {
+  li {
+    border-color: #efefef !important;
+  }
+
+  a:hover {
+    text-decoration: none !important;
+  }
+
+  .post-meta {
+    margin-bottom: 0;
+    font-size: 12px;
+
+    a {
+      color: $primary-color;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.widget_about_me {
+  .about-me {
+    text-align: center;
+  }
+
+  .about-me__title {
+    text-transform: none;
+    margin-bottom: 20px;
+
+    @extend .h3;
+  }
+
+  .about-me__avatar {
+    float: none;
+    margin: 0 20px 25px;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.about-me {
+  margin-bottom: 25px;
+  background: #efefef;
+}
+
+.about-me__title {
+  margin-bottom: 25px;
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 3px;
+    margin-right: 10px;
+    background: $primary-color;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.about-me__avatar {
+  float: left;
+  margin-right: 15px;
+
+  @include media(">=xs") {
+    margin-right: 30px;
+  }
+
+  img {
+    width: 85px;
+    height: 85px;
+
+    @include media(">=xs") {
+      width: 110px;
+      height: 110px;
+    }
+
+    @include media(">=sm") {
+      width: 260px;
+      height: 260px;
+    }
+  }
+}
+
+.about-me__info {
+  padding: 30px;
+
+  @include media(">=sm") {
+    padding-left: 0;
+  }
+
+  a {
+    color: #a9a9a9;
+    font-weight: 700;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}

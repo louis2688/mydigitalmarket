@@ -1,0 +1,65 @@
+/*
+ * CRICLE
+ * ========================================
+ */
+.cricle {
+  z-index: 1;
+
+  @include absolute(0,0,0,0);
+
+  &.parallax-item {
+    display: none;
+
+    @include media(">=sm") {
+      display: block;
+    }
+    
+    .parallax-mirror {
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+.cricle__item {
+  display: none;
+
+  @include absolute();
+  @include vhidden();
+  
+  @include media(">=lg") {
+    display: block;
+  }
+
+  &.fadeIn {
+    @include vdisplay();
+  }
+}
+
+.cricle__item--top {
+  top: 0;
+}
+
+.cricle__item--bottom {
+  bottom: 0;
+}
+
+.cricle__item--left {
+  left: 0;
+}
+
+.cricle__item--right {
+  right: 0;
+}
+
+.cricle__item--center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cricle__item--center-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

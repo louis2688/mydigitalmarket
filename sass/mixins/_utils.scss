@@ -1,0 +1,56 @@
+// Visually hidden element.
+@mixin vhidden() {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Visually display element.
+@mixin vdisplay {
+  opacity: 1;
+  visibility: visible;
+}
+
+// FontAwesome
+%fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fa($icon) {
+  content: $icon;
+  @extend %fa;
+}
+
+// Overlay background
+@mixin overlay($bg: black, $alpha: 0.5, $z-index: 5) {
+  @include absolute(0,0,0,0);
+  background-color: rgba($bg, $alpha);
+  z-index: $z-index;
+}
+
+// Get image height by technical padding-top
+@mixin bx-img($percent-img: 100%) {
+  position: relative;
+  display: block;
+  background-color: gray;
+
+  &:before {
+    content: "";
+    position: relative;
+    display: block;
+    padding-top: $percent-img;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+

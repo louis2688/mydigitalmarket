@@ -1,0 +1,79 @@
+/*
+ * SHARE
+ * ========================================
+ */
+.share {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 350px;
+  z-index: 99;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: rotate(-90deg);
+
+  @include absolute(0,-65px,null,null);
+
+  @include media(">=md") {
+    display: block;
+
+    @include vhidden();
+  }
+
+  &.fadeIn {
+    top: -83px;
+
+    @include vdisplay();
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: 7px;
+
+    &:before {
+      display: none;
+    }
+
+    &:first-child {
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 3px;
+        margin-bottom: 3px;
+        background: $primary-color;
+      }
+
+      a {
+        color: $text-color;
+
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+
+    a {
+      font-size: 20px;
+      color: white !important;
+      display: inline-block;
+      margin: 0 5px;
+
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+
+  > li + li:before {
+    display: none;
+  }
+}

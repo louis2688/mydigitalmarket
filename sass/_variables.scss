@@ -1,0 +1,115 @@
+//== Breakpoints
+$breakpoints: (tn: 320px, xs: 480px, ss: 520px, sm: 768px, md: 992px, lg: 1200px);
+
+//== Colors
+$primary-color:                           #fe5252;
+$secondary-color:                         #3ed8c4;
+$third-color:                             #a9a9a9;
+$four-color:                              #d3d3d3;
+
+//== Scaffolding
+$body-bg:                                 white;
+$text-color:                              #717171;
+$link-color:                              black;
+$link-hover-color:                        $primary-color;
+$link-hover-decoration:                   none;
+
+//== Typography
+$font-family-base:                        'Poppins', sans-serif;
+$font-secondary:                          'Playfair Display', sans-serif;
+$font-size-large:                          18px;
+$font-size-small:                          12px;
+$font-size-h1:                             60px;
+$font-size-h2:                             40px;
+$font-size-h3:                             30px;
+$font-size-h4:                             20px;
+$font-size-h5:                             18px;
+$font-size-h6:                             14px;
+$line-height-base:                         1.857;
+$headings-font-family:                     $font-family-base;
+$headings-font-weight:                     600;
+$headings-line-height:                     1.1;
+$headings-color:                           black;
+
+//== Components
+$border-radius-base:                       2px;
+$border-radius-large:                      4px;
+$border-radius-small:                      0;
+
+//== Buttons
+$btn-font-weight:                          700;
+
+$btn-default-color:                        black;
+$btn-default-bg:                           transparent;
+$btn-default-border:                       black;
+
+$btn-border-radius-base:                   0;
+$btn-border-radius-large:                  0;
+$btn-border-radius-small:                  0;
+
+//== Forms
+$input-color:                    black;
+$input-border:                   black;
+$input-border-focus:             $primary-color;
+$input-color-placeholder:        black;
+$form-group-margin-bottom:       40px;
+$input-height-base:              40px;
+
+
+//== Dropdowns
+$dropdown-bg:                              white;
+$dropdown-border:                          transparent;
+$dropdown-link-color:                      black;
+$dropdown-link-hover-color:                white;
+$dropdown-link-hover-bg:                   $primary-color;
+
+//== Navbar
+$navbar-default-color:                     $text-color;
+$navbar-margin-bottom:                     0;
+$navbar-border-radius:                     0;
+$navbar-default-bg:                        transparent;
+$navbar-default-border:                    transparent;
+
+// Navbar links
+$navbar-default-link-color:                $text-color;
+$navbar-default-link-hover-color:          $primary-color;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $primary-color;
+$navbar-default-link-active-bg:            transparent;
+
+// Navbar brand label
+$navbar-default-brand-color:               black;
+$navbar-default-brand-hover-color:         $primary-color;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $primary-color;
+$navbar-default-toggle-icon-bar-bg:        white;
+$navbar-default-toggle-icon-bar-hover-bg:  white;
+$navbar-default-toggle-border-color:       $primary-color;
+$navbar-default-toggle-border-hover-color: $primary-color;
+
+//== Tabs
+$nav-tabs-active-link-hover-bg:            white;
+$nav-tabs-active-link-hover-color:         $text-color;
+$nav-tabs-active-link-hover-border-color:  white;
+$nav-tabs-content-bg:                      white;
+$nav-tabs-content-color:                   $text-color;
+
+//== Pagination
+$pagination-color:                     #c2c2c2;
+$pagination-bg:                        #fff;
+$pagination-border:                    #c2c2c2;
+
+$pagination-hover-color:               black;
+$pagination-hover-bg:                  transparent;
+$pagination-hover-border:              black;
+
+$pagination-active-color:              black;
+$pagination-active-bg:                 transparent;
+$pagination-active-border:             black;
+
+//== Small screen / tablet
+$grid-float-breakpoint:                    992px;
+
+//== Border
+$default-border:                           1px solid #ccc;

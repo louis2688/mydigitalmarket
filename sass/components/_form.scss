@@ -1,0 +1,62 @@
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[name="value"], {
+  @extend .form-control;
+  appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+
+  margin: 0;
+}
+
+button,
+input[type="submit"] {
+  @extend .btn;
+  @extend .btn-default;
+}
+
+input[type="reset"], input[type="reset"]:hover,
+button[type="reset"], button[type="reset"]:hover {
+  text-decoration: underline;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+// Reset height for `textarea`s
+textarea {
+  min-height: 250px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.form-control {
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  resize: none;
+  padding: 6px 0;
+  margin-bottom: 20px;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+
+  transition: all .3s ease;
+
+  &:focus {
+    box-shadow: none;
+
+    @include placeholder(#ccc);
+  }
+}

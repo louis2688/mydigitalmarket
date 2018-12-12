@@ -1,0 +1,51 @@
+/*
+ * COUNT NUMBER
+ * ========================================
+ */
+.count-number {
+  display: none;
+  font-family: $font-secondary;
+
+  @include media(">=1460px") {
+    display: block;
+    z-index: 3;
+    font-size: 100px;
+    line-height: 0.8;
+
+    @include absolute(0,0,0,0);
+  }
+}
+
+.count-number__item {
+  position: absolute;
+  transition: all .5s ease;
+
+  @include vhidden();
+}
+
+.count-number__item--left {
+  left: 45px;
+}
+
+.count-number__item--right {
+  right: 75px;
+}
+
+.count-number__item--vcenter {
+  top: 50%;
+  margin-top: 30px;
+
+  &.fadeIn {
+    margin-top: -50px;
+
+    @include vdisplay();
+  }
+}
+
+.count-number__item--rotate {
+  transform: rotate(-90deg);
+
+  &:after {
+    content: "-";
+  }
+}

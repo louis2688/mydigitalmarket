@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rtlcss": "^1.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.0.0-alpha"
+  }
+}

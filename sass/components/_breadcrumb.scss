@@ -1,0 +1,88 @@
+/*
+ * BREADCRUMB
+ * ========================================
+ */
+.breadcrumbs {
+  position: relative;
+  z-index: 9;
+  margin: auto !important;
+
+  @include media(">=sm") {
+    text-align: right;
+  }
+
+  @include media(">=lg") {
+    width: 1170px;
+  }
+
+  @include media(">=1460px") {
+    width: 1460px;
+  }
+}
+
+.trail-items {
+  padding: 0 15px !important;
+
+  @include media(">=sm") {
+    padding: 0 30px !important;
+
+    @include absolute(10px,30px);
+  }
+
+  &:before {
+    display: none;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: $primary-color;
+    margin-top: -1.5px;
+
+    @include absolute(50%,-25px);
+
+    @include media(">=sm") {
+      display: block;
+    }
+  }
+}
+
+.breadcrumbs ul,
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  li {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @include media(">=ss") {
+      font-size: 16px;
+    }
+
+    @include media(">=sm") {
+      font-size: 18px;
+    }
+  }
+
+  li > a, li > span {
+    display: inline-block;
+    padding: 5px 8px 5px 5px;
+  }
+
+  a:after {
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+    color: black;
+
+    @include fa("\f178");
+  }
+}

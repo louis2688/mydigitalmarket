@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Cricle-Studio";
+  src: url("../fonts/Cricle-Studio.eot");
+  src: url("../fonts/Cricle-Studio.eot?#iefix") format("eot"), url("../fonts/Cricle-Studio.woff") format("woff"), url("../fonts/Cricle-Studio.ttf") format("truetype"), url("../fonts/Cricle-Studio.svg#Cricle-Studio") format("svg"); }
+
+.cs:before {
+  font-family: "Cricle-Studio";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none; }
+
+.cs-arrow-down:before {
+  content: "\E001"; }
+
+.cs-arrow-left:before {
+  content: "\E002"; }
+
+.cs-arrow-right:before {
+  content: "\E003"; }
+
+.cs-arrow-up:before {
+  content: "\E004"; }
+
+.cs-compass:before {
+  content: "\E005"; }
+
+.cs-engineering:before {
+  content: "\E006"; }
+
+.cs-water:before {
+  content: "\E007"; }
+
+/*# sourceMappingURL=cs-icons.css.map */

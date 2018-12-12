@@ -1,0 +1,57 @@
+// Import variables
+@import 'variables';
+@import 'mixins';
+
+// Import vendor
+@import 'vendor/bootstrap';
+@import 'vendor/include-media';
+@import 'vendor/magnific-popup';
+
+// Compoments
+@import "components/parallax";
+@import "components/grid";
+@import "components/posts-and-pages";
+@import "components/widget";
+
+// Compoments IconsFont
+@import "components/icons";
+@import 'simple-line-icons';
+
+// Layouts
+@import "layouts/utils";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/sidebar";
+@import "layouts/404";
+
+// Compoments Style Cricle Studio
+@import 'components/slick-theme';
+@import "components/reset";
+@import "components/button";
+@import "components/form";
+@import "components/navigation";
+@import "components/comments";
+@import "components/count-number";
+@import "components/cricles";
+@import "components/vertical-site";
+@import "components/page-title";
+@import "components/breadcrumb";
+@import "components/share";
+@import "components/home";
+@import "components/about";
+@import "components/blogs";
+@import "components/contacts";
+@import "components/services";
+@import "components/gallery";
+@import "components/portfolio";
+@import "components/single-project";
+
+// WP Core
+@import "wp/accessibility";
+@import "wp/alignments";
+@import "wp/galleries";
+@import "wp/captions";
+
+.bypostauthor {
+  visibility: visible;
+}

@@ -1,0 +1,77 @@
+.error-404 {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  background-color: #2f2f2f;
+
+  &:after {
+    content: "";
+    
+    @include overlay(black,.5,5);
+  }
+
+  p {
+    color: white;
+
+    &.h3 {
+      font-size: 18px;
+
+      @include media(">=sm") {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .font-second {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    color: $text-color;
+    border: none !important;
+    background: none !important;
+
+    @include absolute(0,0);
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      color: $primary-color;
+      outline: none;
+    }
+  }
+
+  input[type="search"],
+  input[type="text"] {
+    padding: 6px 40px 6px 20px;
+    background: white;
+    font-size: 14px;
+  }
+
+  a {
+    color: $primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.error-wrap {
+  min-width: 300px;
+
+  @include center();
+
+  p {
+    position: relative;
+  }
+}
+
+.error-404__title {
+  font-size: 100px;
+  margin-bottom: 0;
+
+  @include media(">=sm") {
+    font-size: 200px;
+  }
+}

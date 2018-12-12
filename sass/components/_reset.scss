@@ -1,0 +1,266 @@
+a {
+  transition: all .25s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: none;
+  height: auto;
+}
+
+.contact-us-color b {
+  color: $primary-color;
+}
+
+.black {
+  color: black !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.w-880 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 880px !important;
+  }
+}
+
+.w-840 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 840px !important;
+  }
+}
+
+.w-810 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 810px !important;
+  }
+}
+
+.w-790 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 790px !important;
+  }
+}
+
+.w-785 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 785px !important;
+  }
+}
+
+.w-780 {
+  width: 100% !important;
+
+  @include media(">=lg") {
+    width: 780px !important;
+  }
+}
+
+.primary-color {
+  color: $primary-color !important;
+}
+
+.font-second {
+  font-family: $font-secondary !important;
+}
+
+.mfp-close {
+  display: inline-block !important;
+  width: auto !important;
+  padding: 0 !important;
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:focus {
+    background: none;
+  }
+}
+
+.screen-reader-text,
+.sr-only,
+.says {
+  display: none;
+}
+
+.pagination,
+ul.page-numbers {
+  margin: 0 0 50px 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding: 0;
+    margin-right: 5px;
+
+    &:before {
+      display: none;
+    }
+
+    a, span {
+      width: 40px;
+      height: 40px;
+      line-height: 27px;
+      border-radius: 100% !important;
+      text-align: center;
+      border: 2px solid #c2c2c2;
+      font-weight: 700;
+
+      position: relative;
+      float: left;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: #c2c2c2;
+      background-color: #fff;
+
+      &:hover,
+      &.current {
+        z-index: 3;
+        color: black !important;
+        background-color: transparent;
+        border-color: black;
+      }
+    }
+
+    .pagination__icon {
+      font-size: 10px;
+      vertical-align: text-bottom;
+      cursor: pointer;
+    }
+  }
+}
+
+// ADD CSS
+.vc_page-title__name {
+  position: relative !important;
+  top: 0 !important;
+  display: inline-block !important;
+}
+
+.vc_page-title__underline {
+  margin-bottom: 60px !important;
+}
+
+.vc_page-title__name {
+  @include media(">=sm") {
+    font-size: 100px !important;
+  }
+
+  @include media(">=1460px") {
+    font-size: 200px !important;
+  }
+
+  &[class*="vc_custom"] {
+
+    @include media("<lg") {
+      margin-left: 80px !important;
+    }
+
+    @include media("<md") {
+      margin-left: 50px !important;
+    }
+
+    @include media("<sm") {
+      margin-left: auto !important;
+    }
+  }
+}
+
+.vc_page-title__small.vc_page-title__name {
+  font-size: 36px !important;
+
+  @include media(">=sm") {
+    font-size: 100px !important;
+  }
+
+  @include media(">=1460px") {
+    font-size: 100px !important;
+  }
+}
+
+.vc_page-title__portfolio {
+  margin-left: 145px !important;
+  margin-top: -410px !important;
+}
+
+.icon_fix {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  font-size: 90px;
+}
+
+.vc_row,
+.wpb_column {
+  position: relative;
+  z-index: 2;
+}
+
+.single-at_portfolio .vc_row {
+  @include media("<sm") {
+    margin: auto !important;
+  }
+}
+
+.embed-responsive-audio .wp-audio-shortcode {
+  margin-top: -30px;
+}
+
+@each $mb in 0, 20, 25, 30, 35, 40, 50, 60, 70, 80, 95, 100, 130 {
+  .mb-#{$mb} {
+    margin-bottom: #{$mb / 2}px !important;
+
+    @include media(">=md") {
+      margin-bottom: #{$mb}px !important;
+    }
+  }
+}
+
+@each $pt in 0, 50, 70, 80, 100, 110, 120, 130, 150 {
+  .pt-#{$pt} {
+    padding-top: #{$pt}px !important;
+  }
+}
+
+
+@each $pb in 0, 40, 50, 80, 85, 100, 130, 140, 170 {
+  .pb-#{$pb} {
+    padding-bottom: #{$pb}px !important;
+  }
+}
+
+@each $pl in 0 {
+  .pl-#{$pl} {
+    padding: #{$pl}px !important;
+  }
+}
+
+@each $pr in 0 {
+  .pr-#{$pr} {
+    padding: #{$pr}px !important;
+  }
+}
+

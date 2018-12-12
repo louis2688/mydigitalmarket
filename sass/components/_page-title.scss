@@ -1,0 +1,649 @@
+
+/*
+ * PAGE TITLE
+ * ========================================
+ */
+.header-content {
+  position: relative;
+  margin-bottom: 50px;
+
+  @include media(">=sm") {
+    margin-bottom: 0;
+  }
+}
+
+.page-title {
+  position: relative;
+  height: 100%;
+  margin: 0 !important;
+
+  @include media(">=sm") {
+    height: 350px;
+    background: #f8f8f8;
+  }
+
+  @include media(">=1460px") {
+    height: 545px;
+  }
+
+  &.none-child {
+    height: 150px !important;
+  }
+
+  .vertical-site__item--left {
+    left: -85px;
+  }
+
+  .cricle {
+    overflow: hidden;
+  }
+
+  .cricle__item {
+    transition: all 1s ease;
+
+    img {
+      max-width: 70%;
+
+      @include media(">=1460px") {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .page-title__name {
+    line-height: .8;
+  }
+}
+
+.page-title__name {
+  font-size: 72px;
+  font-weight: 500;
+  color: white;
+  line-height: .8;
+  z-index: 9;
+  transition: all 1.2s ease;
+
+  @include absolute(295px, null, null, -100%);
+  @include vhidden();
+
+  @include media(">=sm") {
+    font-size: 120px;
+    z-index: 4;
+    color: black;
+  }
+
+  @include media(">=1460px") {
+    font-size: 200px;
+    top: 375px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: $primary-color;
+    transition: all 1.5s ease;
+
+    @include absolute(null, -100%, -30px, null);
+    @include vhidden();
+
+    @include media(">=sm") {
+      bottom: -60px;
+    }
+  }
+}
+
+@include media("<1460px") {
+  .page-title__name {
+    &[class*="vc_custom"] {
+      margin-top: 260px !important;
+    }
+  }
+}
+
+.page-title__people {
+  transition: all 1s ease;
+  text-align: center;
+  z-index: 1;
+
+  @include media(">=lg") {
+    z-index: 8;
+  }
+
+  @include absolute(0, 0, 0, 0);
+  @include vhidden();
+
+  img {
+    height: 100%;
+    width: auto;
+    max-width: none !important;
+
+    @include media(">=sm") {
+      height: 98%;
+
+      @include absolute(null,0,0,null);
+    }
+  }
+
+  &.fix-mobile {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+      content: "";
+
+      @include overlay(black, .3, 8);
+
+      @include media(">=lg") {
+        @include overlay(black, .78, 8);
+      }
+    }
+  }
+}
+
+.page-title-single {
+  .page-title__people {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .page-title__name {
+    @include relative(auto,auto,auto,auto);
+  }
+
+  .page-title__info {
+    z-index: 4;
+    transition: all .8s ease;
+
+    @include absolute(null, null, 95px, 0);
+  }
+
+  .page-title__name {
+    color: white;
+    font-size: 70px;
+    top: auto;
+    bottom: auto;
+    margin-bottom: 60px;
+
+    @include media(">=sm") {
+      font-size: 100px;
+    }
+
+    &:after {
+      bottom: -40px;
+    }
+  }
+
+  .page-title__category {
+    font-size: 18px;
+    letter-spacing: 4px;
+    transition: all .8s ease;
+
+    @include vhidden();
+  }
+
+  .arrow-scroll {
+    font-size: 26px;
+    color: white;
+  }
+}
+
+.page-title--home {
+  height: 100%;
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--right {
+    right: -20px;
+
+    @include media(">=1460px") {
+      right: 250px;
+    }
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  .cricle__item--left {
+    left: 373px;
+  }
+
+  .vertical-site__item--bottom {
+    bottom: 0;
+  }
+
+  @include media(">=sm") {
+    .page-title__people img {
+      margin-right: 65px;
+    }
+  }
+
+  @include media(">=md") {
+    .page-title__people img {
+      margin-right: 115px;
+    }
+  }
+
+  @include media(">=1460px") {
+    .page-title__people img {
+      margin-right: 195px;
+    }
+  }
+
+  .page-title__name {
+    line-height: .75;
+
+    @include media(">=sm") {
+      top: 370px;
+    }
+  }
+}
+
+.page-title--about {
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--right {
+    right: 0;
+
+    @include media(">=1460px") {
+      right: 302px;
+    }
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  .cricle__item--left {
+    left: 400px;
+
+    @include media(">=1460px") {
+      left: 537px;
+    }
+  }
+
+  .vertical-site__item--bottom {
+    bottom: 0;
+  }
+
+  @include media(">=sm") {
+    .page-title__people img {
+      margin-right: 65px;
+      height: 80%;
+    }
+  }
+
+  @include media(">=md") {
+    .page-title__people img {
+      margin-right: 210px;
+    }
+  }
+
+  @include media(">=1460px") {
+    .page-title__people img {
+      margin-right: 345px;
+    }
+  }
+}
+
+.page-title--contact {
+  .cricle {
+    z-index: 9;
+  }
+
+  .cricle__item--left {
+    left: 292px;
+  }
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--right {
+    right: 85px;
+
+    @include media(">=1460px") {
+      right: 310px;
+    }
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  @include media(">=sm") {
+    .page-title__people img {
+      margin-right: 65px;
+      height: 80%;
+    }
+  }
+
+  @include media(">=md") {
+    .page-title__people img {
+      margin-right: 170px;
+    }
+  }
+
+  @include media(">=1460px") {
+    .page-title__people img {
+      margin-right: 277px;
+    }
+  }
+}
+
+.page-title--services {
+  .cricle {
+    z-index: 9;
+  }
+
+  .cricle__item--left {
+    left: 229px;
+  }
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--right {
+    right: 60px;
+
+    @include media(">=1460px") {
+      right: 252px;
+    }
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  @include media(">=sm") {
+    .page-title__people img {
+      margin-right: 65px;
+      height: 80%;
+    }
+  }
+
+  @include media(">=md") {
+    .page-title__people img {
+      margin-right: 270px;
+    }
+  }
+
+  @include media(">=1460px") {
+    .page-title__people img {
+      margin-right: 385px;
+    }
+  }
+}
+
+.page-title--portfolio {
+  .cricle {
+    z-index: 9;
+  }
+
+  .cricle__item--left {
+    left: 292px;
+  }
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--right {
+    right: 125px;
+
+    @include media(">=1460px") {
+      right: 310px;
+    }
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  @include media(">=sm") {
+    .page-title__people img {
+      margin-right: 180px;
+      height: 80%;
+    }
+  }
+
+  @include media(">=md") {
+    .page-title__people img {
+      margin-right: 275px;
+    }
+  }
+
+  @include media(">=1460px") {
+    .page-title__people img {
+      margin-right: 377px;
+    }
+  }
+}
+
+.page-title--single-project,
+.page-title--single-project-2 {
+  height: 100%;
+
+  .cricle {
+    z-index: 3;
+  }
+
+  .cricle__item--top {
+    top: -100%;
+  }
+
+  .cricle__item--bottom {
+    bottom: -100%;
+  }
+
+  .page-title__people {
+    &:after {
+      content: "";
+
+      @include overlay(black,.5,5);
+    }
+
+    img {
+      max-width: 100%;
+      height: 100%;
+
+      @include media(">=1460px") {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-title--single-project {
+  .cricle__item--left {
+    left: 292px;
+  }
+
+  .cricle__item--right {
+    right: 237px;
+  }
+}
+
+.page-title--single-project-2 {
+  .cricle__item--left {
+    left: 265px;
+  }
+
+  .cricle__item--right {
+    right: 165px;
+  }
+
+  .page-title__people:after {
+    @include overlay(black,0.42,1);
+  }
+}
+
+.fadeIn {
+  .page-title {
+    .cricle__item {
+      @include vdisplay();
+    }
+  }
+
+  .page-title__name {
+    left: 30px;
+
+    @include vdisplay();
+
+    @include media(">=lg") {
+      left: 217px;
+    }
+
+    &:after {
+      right: 0;
+
+      @include vdisplay();
+    }
+  }
+
+  .page-title__people {
+    @include vdisplay();
+  }
+
+  .page-title {
+    .vertical-site__item {
+      @include vdisplay();
+    }
+
+    .vertical-site__item--bottom {
+      bottom: 200px;
+
+      @include media(">=1460px") {
+        bottom: 280px;
+      }
+    }
+  }
+
+  .page-title--home {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: -20%;
+    }
+
+    .vertical-site__item--bottom {
+      bottom: 350px;
+
+      @include media(">=1460px") {
+        bottom: 400px;
+      }
+    }
+  }
+
+  .page-title--about {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: -175px;
+
+      @include media(">=1460px") {
+        bottom: -251px;
+      }
+    }
+  }
+
+  .page-title--contact {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: -37px;
+    }
+  }
+
+  .page-title--services {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: -150px;
+
+      @include media(">=1460px") {
+        bottom: -200px;
+      }
+    }
+  }
+
+  .page-title--portfolio {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: -25px;
+
+      @include media(">=1460px") {
+        bottom: -37px;
+      }
+    }
+  }
+
+  .page-title--single-project {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: 0;
+    }
+  }
+
+  .page-title--single-project-2 {
+    .cricle__item--top {
+      top: 0;
+    }
+
+    .cricle__item--bottom {
+      bottom: 0;
+    }
+  }
+
+  .page-title-single {
+    .vertical-site__item--bottom {
+      bottom: 50%;
+    }
+
+    .page-title__info {
+      left: 30px;
+
+      @include media(">=sm") {
+        left: 80px;
+      }
+
+      @include media(">=lg") {
+        left: 374px;
+      }
+    }
+
+    .page-title__name {
+      left: auto;
+    }
+
+    .page-title__category {
+      @include vdisplay();
+    }
+  }
+}

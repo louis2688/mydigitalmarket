@@ -1,0 +1,50 @@
+/*
+ * VERTICAL SITE
+ * ========================================
+ */
+.vertical-site {
+  display: none;
+
+  @include absolute(0,0,0,0);
+
+  @include media(">=lg") {
+    display: block;
+  }
+}
+
+.vertical-site__item {
+  letter-spacing: 5px;
+  line-height: 2.5;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 400px;
+  color: $third-color;
+  transform: rotate(-90deg);
+  transition: all 1s ease;
+  z-index: 9;
+
+  @include absolute();
+  @include vhidden();
+
+  &.fadeIn {
+    @include vdisplay();
+  }
+}
+
+.vertical-site__item--left {
+  left: -85px;
+  bottom: 30%;
+
+  &.fadeIn {
+    bottom: 50%;
+  }
+}
+
+.vertical-site__item--right {
+  right: -85px;
+  bottom: 30%;
+
+  &.fadeIn {
+    bottom: 50%;
+  }
+}

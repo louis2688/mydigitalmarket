@@ -1,0 +1,29 @@
+// Buttons
+.btn {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: all .25s ease;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:hover {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-default {
+  background: white;
+  padding: 6px 25px;
+  border-width: 2px;
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:focus {
+    background: $primary-color;
+    border-color: $primary-color;
+    color: white;
+  }
+}

@@ -1,0 +1,51 @@
+//
+// FOOTER LAYOUT
+// ====================================================
+#footer {
+  background: #f4f4f4;
+}
+
+.footer-wrap {
+  padding: 80px 0;
+
+  a {
+    transition: all .25s ease;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 60px;
+}
+
+.footer__logo--white {
+  display: none;
+}
+
+.footer__socials {
+  margin-bottom: 50px;
+}
+
+.footer__icon {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 0.867;
+  margin: 0 15px;
+
+  @include media(">=lg") {
+    margin: 0 40px;
+  }
+}
+
+.footer__copyright {
+  font-size: $font-size-small;
+  margin-bottom: 0;
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
